@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.katya.dashboard-weekly</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/ekaterinasum/digital-avatars-pages/bin/weekly-ping.sh</string>
+  </array>
+
+  <!-- Вторник, 18:00. Weekday: 0/7 = вс, 1 = пн, 2 = вт.
+       Если ноут спал — launchd выполнит задачу при пробуждении, не пропустит. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>2</integer>
+    <key>Hour</key><integer>18</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/ekaterinasum/Library/Logs/dashboard-weekly.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/ekaterinasum/Library/Logs/dashboard-weekly.err.log</string>
+</dict>
+</plist>
