@@ -178,6 +178,17 @@ section { margin-bottom: 40px; }
 .scenario .quote { color: #e6edf3; font-weight: 600; }
 .scenario .fmt { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 
+/* Скриншоты */
+.shots { display: grid; gap: 22px; }
+.shot img {
+  display: block; width: 100%; border-radius: 14px; border: 1px solid #21262d;
+}
+.shot figcaption { font-size: 12.5px; color: #8b949e; margin-top: 10px; }
+.shot .pending {
+  display: inline-block; margin-left: 6px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.6px; color: #e3b341;
+}
+
 /* Пустое состояние (раздел, который ещё не наполнен) */
 .empty {
   border: 1px dashed #30363d; border-radius: 12px; background: #12171f;
