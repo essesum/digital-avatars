@@ -114,6 +114,52 @@ section { margin-bottom: 40px; }
 .tag.wait  { background: rgba(139,148,158,0.18); color: #b1bac4; }
 .tag.cpu   { background: rgba(255,123,114,0.14); color: #ff9f97; }
 
+/* Фокус недели */
+.focus {
+  border: 1px solid rgba(210,168,255,0.35); border-radius: 16px;
+  background: linear-gradient(180deg, rgba(210,168,255,0.06), rgba(210,168,255,0) 220px);
+  padding: 22px 22px 24px;
+}
+.focus .sec-head { margin-bottom: 14px; }
+.focus .demo-img { max-width: 100%; }
+
+.stand { margin-top: 22px; border-top: 1px solid #21262d; padding-top: 20px; }
+.stand-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.stand-title { font-size: 15px; font-weight: 700; }
+.stand-sub { font-size: 12.5px; color: #8b949e; margin-top: 2px; }
+.stand-head .btn-link { margin-top: 0; margin-left: auto; }
+.creds {
+  margin-top: 12px; font-size: 12.5px; color: #8b949e;
+  background: #12171f; border: 1px solid #21262d; border-radius: 10px; padding: 9px 13px;
+}
+.creds code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #21262d; color: #e6edf3; padding: 1px 7px; border-radius: 5px; font-size: 12.5px;
+}
+.stand-frame {
+  position: relative; margin-top: 14px; width: 100%; aspect-ratio: 16 / 9;
+  border: 1px solid #21262d; border-radius: 14px; overflow: hidden; background: #12171f;
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px;
+}
+.stand-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.stand-load {
+  font: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
+  padding: 10px 18px; border-radius: 10px; border: 0;
+  background: #d2a8ff; color: #1a0f24;
+}
+.stand-load:hover { background: #e0bfff; }
+.stand-hint { font-size: 12.5px; color: #6e7681; max-width: 460px; text-align: center; }
+
+.next {
+  margin-top: 22px; display: flex; align-items: center; gap: 10px;
+  border: 1px solid #21262d; border-left: 3px solid #e3b341; border-radius: 10px;
+  background: #161b22; padding: 13px 16px; font-size: 14.5px; font-weight: 600;
+}
+.next .next-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  color: #e3b341;
+}
+
 /* Пустое состояние (раздел, который ещё не наполнен) */
 .empty {
   border: 1px dashed #30363d; border-radius: 12px; background: #12171f;

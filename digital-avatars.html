@@ -29,6 +29,40 @@
     <div class="counter"><div class="n">19</div><div class="l">Всего проектов</div></div>
   </div>
 
+  <!-- ФОКУС НЕДЕЛИ -->
+  <section class="focus">
+    <div class="sec-head">
+      <span class="dot violet"></span>
+      <h2>Фокус недели: Сберкот в Школе Мурино</h2>
+      <span class="count">МОБУ «Муринская СОШ № 8»</span>
+    </div>
+
+    <img class="demo-img" src="assets/murino.jpg" alt="Интерактивный стенд Сберкота в Школе Мурино" loading="lazy">
+    <div class="demo-note">Аватар-стенд на CPU в холле первого этажа: расписание, меню столовой, лига классов, афиша. Голосовое и кнопочное управление.</div>
+
+    <div class="stand">
+      <div class="stand-head">
+        <div>
+          <div class="stand-title">Живой стенд</div>
+          <div class="stand-sub">school.digitalavatars.ru · холл 1 этажа</div>
+        </div>
+        <a class="btn-link" href="https://space:Fuu0thae9ilu@school.digitalavatars.ru/" target="_blank" rel="noopener">Открыть в новой вкладке ↗</a>
+      </div>
+
+      <div class="creds">Доступ к стенду: логин <code>space</code> · пароль <code>Fuu0thae9ilu</code></div>
+
+      <div class="stand-frame" id="stand-frame">
+        <button class="stand-load" id="stand-load" type="button">Показать живой стенд</button>
+        <div class="stand-hint">Браузер спросит логин и пароль — они указаны выше. Дальше стенд обновляется в реальном времени.</div>
+        <noscript>
+          <a class="btn-link" href="https://space:Fuu0thae9ilu@school.digitalavatars.ru/" target="_blank" rel="noopener">Открыть стенд ↗</a>
+        </noscript>
+      </div>
+    </div>
+
+    <div class="next"><span class="next-label">Дальше</span> Посчитать лицензию на 100 школ</div>
+  </section>
+
   <!-- СЕЙЧАС В РАБОТЕ -->
   <section>
     <div class="sec-head">
@@ -45,7 +79,7 @@
       <div class="row"><span class="name">ИИ-офис ВСП — аватар на CPU для СБОЛ ПРО</span><span class="tag cpu">CPU</span><span class="tag cross">кроссцели</span></div>
       <div class="row"><span class="name">Сберкидс на CPU</span><span class="tag cpu">CPU</span><span class="tag cross">кроссцели</span></div>
       <div class="row"><span class="name">Пульс Алтайка на CPU</span><span class="tag cpu">CPU</span></div>
-      <div class="row"><span class="name">Сберкот (Мурчик) в Школе Мурино — интерактивный стенд</span><span class="tag cpu">CPU</span><span class="tag docs">демо-стенд</span></div>
+      <div class="row"><span class="name">Сберкот (Мурчик) в Школе Мурино — интерактивный стенд</span><span class="tag cpu">CPU</span><span class="tag docs">демо-стенд</span><span class="tag paid">фокус недели</span></div>
     </div>
 
     <div class="group-label">Платные</div>
@@ -73,17 +107,6 @@
         allow="autoplay; microphone; camera" loading="eager" title="Аватар Алтайка на CPU"></iframe>
     </div>
     <div class="demo-note">Пример аватара, работающего на CPU (без GPU). Ссылка: <a href="https://sdk-avatar2d-browser-stage.digitalavatars.ru/?avatar=altaika_nano_v2_looped" target="_blank" rel="noopener" style="color:#79c0ff">открыть в новой вкладке ↗</a></div>
-  </section>
-
-  <!-- ДЕМО СТЕНД МУРИНО -->
-  <section>
-    <div class="sec-head">
-      <span class="dot violet"></span>
-      <h2>Демо: интерактивный стенд Школы Мурино</h2>
-      <span class="count">Сберкот · Мурчик</span>
-    </div>
-    <img class="demo-img" src="assets/murino.jpg" alt="Интерактивный стенд Сберкота в Школе Мурино" loading="lazy">
-    <div class="demo-note">МОБУ «Муринская СОШ № 8». Аватар-стенд на CPU: расписание, меню столовой, лига классов, афиша. Голосовое и кнопочное управление.</div>
   </section>
 
   <!-- В ПРОРАБОТКЕ -->
@@ -162,5 +185,19 @@
   <footer>Внутренний дашборд команды Digital Avatars · обновляется по средам</footer>
 
 </div>
+
+<script>
+  // Живой стенд грузится по клику: пока не нажали, во фрейме стоит кнопка,
+  // а не белая страница «401 Authorization Required».
+  document.getElementById('stand-load').addEventListener('click', function () {
+    var box = document.getElementById('stand-frame');
+    var frame = document.createElement('iframe');
+    frame.src = 'https://school.digitalavatars.ru/';
+    frame.title = 'Интерактивный стенд Школы Мурино';
+    frame.allow = 'autoplay; microphone';
+    box.textContent = '';
+    box.appendChild(frame);
+  });
+</script>
 </body>
 </html>
