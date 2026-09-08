@@ -113,6 +113,9 @@ section { margin-bottom: 40px; }
 .tag.paid  { background: rgba(210,153,255,0.16); color: #d2a8ff; }
 .tag.wait  { background: rgba(139,148,158,0.18); color: #b1bac4; }
 .tag.cpu   { background: rgba(255,123,114,0.14); color: #ff9f97; }
+.tag.live  { background: rgba(33,197,110,0.20); color: #56d888; }
+.tag.upd   { background: rgba(121,192,255,0.16); color: #a5d6ff; }
+.tag.new   { background: rgba(210,153,255,0.16); color: #d2a8ff; }
 
 /* Фокус недели */
 .focus {
@@ -159,6 +162,51 @@ section { margin-bottom: 40px; }
   font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
   color: #e3b341;
 }
+
+/* Видео с площадок */
+.vid { margin: 0; }
+.vid video {
+  display: block; width: 100%; border-radius: 14px;
+  border: 1px solid #21262d; background: #0d1117;
+}
+.vid figcaption { font-size: 12.5px; color: #8b949e; margin-top: 9px; }
+.vid-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+
+/* Фокус недели: вертикальное видео слева, программа справа */
+.focus-split {
+  display: grid; grid-template-columns: 250px 1fr; gap: 22px;
+  align-items: start; margin-top: 16px;
+}
+
+/* Программа выставки / этапы */
+.timeline { display: grid; gap: 10px; }
+.tl {
+  display: flex; gap: 14px; align-items: baseline;
+  border: 1px solid #21262d; border-radius: 10px; background: #161b22; padding: 12px 15px;
+}
+.tl .d {
+  font-size: 12px; font-weight: 800; letter-spacing: 0.3px;
+  color: #8b949e; flex: 0 0 92px;
+}
+.tl .t { font-size: 13.5px; color: #c9d1d9; }
+.tl.now { border-color: rgba(210,168,255,0.45); background: rgba(210,168,255,0.06); }
+.tl.now .d { color: #d2a8ff; }
+.tl.now .t { color: #e6edf3; font-weight: 600; }
+
+/* Карточка запущенного проекта */
+.launch {
+  margin-top: 16px; border: 1px solid #21262d; border-left: 3px solid #21c56e;
+  border-radius: 14px; background: #12171f; padding: 20px 22px 22px;
+}
+.launch-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.launch-title { font-size: 16px; font-weight: 700; }
+.launch-sub { font-size: 12.5px; color: #8b949e; margin-top: 3px; }
+.launch-date {
+  margin-left: auto; font-size: 11px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.6px; white-space: nowrap;
+  color: #56d888; background: rgba(33,197,110,0.14); padding: 4px 10px; border-radius: 20px;
+}
+.launch-body { font-size: 13.5px; color: #c9d1d9; margin-top: 10px; }
 
 /* Разворот сценария под строкой проекта */
 .scenario {
@@ -266,4 +314,9 @@ footer { margin-top: 40px; color: #6e7681; font-size: 12px; text-align: center; 
   .home-cards { grid-template-columns: 1fr; }
   .row { flex-wrap: wrap; gap: 6px 10px; }
   .nav-home { margin-left: 0; width: 100%; }
+  .vid-grid { grid-template-columns: 1fr; }
+  .focus-split { grid-template-columns: 1fr; }
+  .focus-split .vid { max-width: 250px; }
+  .tl { flex-wrap: wrap; gap: 4px 14px; }
+  .launch-date { margin-left: 0; }
 }
