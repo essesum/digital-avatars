@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="wrap">
+<div class="wrap wide">
 
   <nav class="nav">
     <a class="nav-btn active" href="digital-avatars.html">Digital Avatars</a>
@@ -24,75 +24,76 @@
 
   <div class="counters">
     <div class="counter green"><div class="n">2</div><div class="l">Запущено</div></div>
-    <div class="counter"><div class="n">8</div><div class="l">Внутри Сбера</div></div>
-    <div class="counter blue"><div class="n">4</div><div class="l">Платные</div></div>
-    <div class="counter amber"><div class="n">8</div><div class="l">В проработке</div></div>
+    <div class="counter"><div class="n">8</div><div class="l">Внутренние</div></div>
+    <div class="counter blue"><div class="n">5</div><div class="l">Платные</div></div>
+    <div class="counter amber"><div class="n">7</div><div class="l">В проработке</div></div>
     <div class="counter"><div class="n">22</div><div class="l">Всего проектов</div></div>
   </div>
 
-  <!-- ФОКУС НЕДЕЛИ -->
-  <section class="focus">
-    <div class="sec-head">
-      <span class="dot violet"></span>
-      <h2>Фокус недели: Иннопром, Индия</h2>
-      <span class="count">выставка 9–11 сентября</span>
-    </div>
-
-    <div class="demo-note">Интерактивные аватары на стенде Сбера. Проект запущен на площадке — аватар отвечает посетителям вживую.</div>
-
-    <div class="focus-split">
-      <figure class="vid">
-        <video src="assets/video/innoprom-india.mp4" poster="assets/video/innoprom-india.jpg"
-          controls playsinline preload="none" title="Аватар на стенде Иннопрома"></video>
-        <figcaption>Аватар на стенде: ожидание и перенос веса</figcaption>
-      </figure>
-
-      <div class="timeline">
-        <div class="tl"><span class="d">9 сентября</span><span class="t">Старт выставки, стенд открыт для посетителей</span></div>
-        <div class="tl now"><span class="d">10 сентября</span><span class="t">Ждём делегацию первых лиц</span></div>
-        <div class="tl"><span class="d">11 сентября</span><span class="t">Ждём Германа Грефа</span></div>
-      </div>
-    </div>
-
-    <div class="next"><span class="next-label">Дальше</span> Снять показ на стенде и собрать обратную связь с площадки</div>
-  </section>
+  <div class="cols">
+  <div class="col">
 
   <!-- ЗАПУЩЕНО -->
   <section>
     <div class="sec-head">
       <span class="dot green"></span>
       <h2>Запущено</h2>
-      <span class="count">2 проекта</span>
+      <span class="count">2 площадки</span>
     </div>
 
     <div class="list">
-      <div class="row"><span class="name">Мурчик и Барсук в Школе Мурино — интерактивные аватары</span><span class="tag cpu">CPU</span><span class="tag live">1 сентября</span></div>
-      <div class="row"><span class="name">Иннопром, Индия — интерактивные аватары на стенде</span><span class="tag paid">платный</span><span class="tag live">9 сентября</span></div>
+      <div class="row"><span class="name">СберИндия на Иннопроме — аватар SIMA на стенде</span><span class="tag paid">платный</span><span class="tag live">9 сентября</span></div>
+      <div class="row"><span class="name">Школа Мурино — Мурчик и Барсук на стенде</span><span class="tag cpu">CPU</span><span class="tag live">1 сентября</span></div>
+    </div>
+
+    <div class="vid-row">
+      <figure class="vid">
+        <video src="assets/video/innoprom-india.mp4" poster="assets/video/innoprom-india.jpg"
+          controls playsinline preload="none" title="Аватар SIMA на стенде СберИндии"></video>
+        <figcaption>Аватар SIMA · стенд СберИндии на Иннопроме</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="assets/video/murino-stand.mp4" poster="assets/video/murino-stand.jpg"
+          controls playsinline preload="none" title="Мурчик отвечает на стенде"></video>
+        <figcaption>Мурчик отвечает на экране стенда</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="assets/video/murino-murchik.mp4" poster="assets/video/murino-murchik.jpg"
+          controls playsinline preload="none" title="Школьники у стенда в Мурино"></video>
+        <figcaption>Школьники у стенда, Барсук на экране</figcaption>
+      </figure>
     </div>
 
     <article class="launch">
       <div class="launch-head">
         <div>
-          <div class="launch-title">Мурчик и Барсук в Школе Мурино</div>
+          <div class="launch-title">СберИндия на Иннопроме</div>
+          <div class="launch-sub">Аватар SIMA · выставка 9–11 сентября</div>
+        </div>
+        <span class="launch-date">запущено 9 сентября 2026</span>
+      </div>
+
+      <div class="launch-body">Интерактивный аватар на стенде: отвечает посетителям вживую, ведёт диалог на площадке.</div>
+
+      <div class="timeline">
+        <div class="tl"><span class="d">9 сентября</span> <span class="t">Старт выставки, стенд открыт для посетителей</span></div>
+        <div class="tl now"><span class="d">10 сентября</span> <span class="t">Ждём делегацию первых лиц</span></div>
+        <div class="tl"><span class="d">11 сентября</span> <span class="t">Ждём Германа Грефа</span></div>
+      </div>
+
+      <div class="next"><span class="next-label">Дальше</span> Снять показ на стенде и собрать обратную связь с площадки</div>
+    </article>
+
+    <article class="launch">
+      <div class="launch-head">
+        <div>
+          <div class="launch-title">Школа Мурино</div>
           <div class="launch-sub">МОБУ «Муринская СОШ № 8» · холл 1 этажа</div>
         </div>
         <span class="launch-date">запущено 1 сентября 2026</span>
       </div>
 
-      <div class="launch-body">Два интерактивных аватара на стенде: расписание, меню столовой, лига классов, афиша. Работают на CPU, без GPU. Голосовое и кнопочное управление.</div>
-
-      <div class="vid-grid">
-        <figure class="vid">
-          <video src="assets/video/murino-murchik.mp4" poster="assets/video/murino-murchik.jpg"
-            controls playsinline preload="none" title="Мурчик на стенде в Школе Мурино"></video>
-          <figcaption>Школьники у стенда: Барсук на экране</figcaption>
-        </figure>
-        <figure class="vid">
-          <video src="assets/video/murino-stand.mp4" poster="assets/video/murino-stand.jpg"
-            controls playsinline preload="none" title="Мурчик отвечает на стенде"></video>
-          <figcaption>Мурчик отвечает на экране стенда</figcaption>
-        </figure>
-      </div>
+      <div class="launch-body">Мурчик и Барсук на стенде: расписание, меню столовой, лига классов, афиша. Работают на CPU, без GPU. Голосовое и кнопочное управление.</div>
 
       <div class="stand">
         <div class="stand-head">
@@ -118,15 +119,37 @@
     </article>
   </section>
 
+  <!-- В ПРОРАБОТКЕ -->
+  <section>
+    <div class="sec-head">
+      <span class="dot amber"></span>
+      <h2>В проработке</h2>
+      <span class="count">7 проектов</span>
+    </div>
+    <div class="list">
+      <div class="row"><span class="name">СберЗдоровье — капсула в ИИ-офис</span><span class="tag cross">кроссцели</span><span class="tag paid">платный</span></div>
+      <div class="row paused"><span class="name">Гига ИИ-агент для питчинга презентаций</span><span class="tag cross">кроссцели</span><span class="tag pause">пауза</span></div>
+      <div class="row"><span class="name">АСУ — образы учёных</span><span class="tag wait">ждём данных</span><span class="tag paid">оплачен</span></div>
+      <div class="row"><span class="name">Екатерина II — AIJ, историческое сообщество</span><span class="tag paid">платный</span></div>
+      <div class="row paused"><span class="name">Изи Бизнес — Ваня Дмитриенко</span><span class="tag pause">пауза</span></div>
+      <div class="row"><span class="name">Okko — Буббоко</span></div>
+      <div class="row"><span class="name">РЖЯ для Казначейства</span></div>
+    </div>
+
+  </section>
+
+  </div>
+  <div class="col">
+
   <!-- СЕЙЧАС В РАБОТЕ -->
   <section>
     <div class="sec-head">
       <span class="dot green"></span>
       <h2>Сейчас в работе</h2>
-      <span class="count">12 проектов</span>
+      <span class="count">13 проектов</span>
     </div>
 
-    <div class="group-label">Внутри Сбера</div>
+    <div class="group-label">Внутренние решения · кроссцели</div>
     <div class="list">
       <div class="row"><span class="name">СберПервый — ИИрина, видео с ИИ-консультантом</span><span class="tag cross">кроссцели</span></div>
       <div class="row"><span class="name">СберПервый — ИИрина, интерактив в МП СБОЛ</span><span class="tag cpu">CPU</span><span class="tag cross">кроссцели</span></div>
@@ -138,49 +161,13 @@
       <div class="row"><span class="name">Сберкидс на CPU</span><span class="tag cpu">CPU</span><span class="tag cross">кроссцели</span></div>
     </div>
 
-    <div class="group-label">Платные</div>
+    <div class="group-label">Платные решения</div>
     <div class="list">
       <div class="row"><span class="name">СберЗдоровье и ГигаДок — годовая лицензия, встраивание решения</span><span class="tag paid">платный</span><span class="tag new">новое</span></div>
       <div class="row"><span class="name">ЦППК — стойка с аватаром, готовим к AIJ и релизу</span><span class="tag dev">в разработке</span></div>
-      <div class="row"><span class="name">Горно-Алтайск — стойка с аватаром</span><span class="tag docs">документы</span></div>
+      <div class="row"><span class="name">Корпоративный университет — «Ариадна», агент индивидуальных уроков</span><span class="tag paid">платный</span><span class="tag cross">кроссцели</span></div>
+      <div class="row paused"><span class="name">Горно-Алтайск — стойка с аватаром</span><span class="tag pause">пауза</span></div>
       <div class="row"><span class="name">Эватор — аватары для платформы</span></div>
-    </div>
-  </section>
-
-  <!-- ДЕМО АВАТАРА НА CPU -->
-  <section>
-    <div class="sec-head">
-      <span class="dot" style="background:#ff9f97"></span>
-      <h2>Демо: аватар на CPU</h2>
-      <span class="count">Алтайка · nano v2</span>
-    </div>
-    <div class="demo-frame">
-      <div class="demo-fallback">
-        <div>Живое демо не подгрузилось в этой панели.<br>Открой в браузере, чтобы увидеть аватар.</div>
-        <a class="btn-link" href="https://sdk-avatar2d-browser-stage.digitalavatars.ru/?avatar=altaika_nano_v2_looped" target="_blank" rel="noopener">Открыть демо ↗</a>
-      </div>
-      <iframe src="https://sdk-avatar2d-browser-stage.digitalavatars.ru/?avatar=altaika_nano_v2_looped"
-        allow="autoplay; microphone; camera" loading="eager" title="Аватар Алтайка на CPU"></iframe>
-    </div>
-    <div class="demo-note">Пример аватара, работающего на CPU (без GPU). Ссылка: <a href="https://sdk-avatar2d-browser-stage.digitalavatars.ru/?avatar=altaika_nano_v2_looped" target="_blank" rel="noopener" style="color:#79c0ff">открыть в новой вкладке ↗</a></div>
-  </section>
-
-  <!-- В ПРОРАБОТКЕ -->
-  <section>
-    <div class="sec-head">
-      <span class="dot amber"></span>
-      <h2>В проработке</h2>
-      <span class="count">8 проектов</span>
-    </div>
-    <div class="list">
-      <div class="row"><span class="name">Корпоративный университет — «Ариадна», агент индивидуальных уроков</span><span class="tag cross">кроссцели</span></div>
-      <div class="row"><span class="name">СберЗдоровье — капсула в ИИ-офис</span><span class="tag paid">платный</span></div>
-      <div class="row"><span class="name">Гига ИИ-агент для питчинга презентаций</span><span class="tag cross">кроссцели</span></div>
-      <div class="row"><span class="name">АСУ — образы учёных</span><span class="tag wait">ждём данных</span><span class="tag paid">оплачен</span></div>
-      <div class="row"><span class="name">Екатерина II — AIJ, историческое сообщество</span><span class="tag paid">платный</span></div>
-      <div class="row"><span class="name">Изи Бизнес — Ваня Дмитриенко</span></div>
-      <div class="row"><span class="name">Okko — Буббоко</span></div>
-      <div class="row"><span class="name">РЖЯ для Казначейства</span></div>
     </div>
 
     <div class="scenario">
@@ -192,6 +179,22 @@
           <div class="fmt"><span class="tag cross">подкаст по теме</span><span class="tag paid">разговор с ИИ-аватаром</span></div></div></li>
         <li><div>Платформа думает и выдаёт индивидуальный урок под этот запрос — в том формате, который выбрал сотрудник.</div></li>
       </ol>
+    </div>
+
+  </section>
+
+  <!-- ДЕМО АВАТАРА НА CPU -->
+  <section>
+    <div class="sec-head">
+      <span class="dot" style="background:#ff9f97"></span>
+      <h2>Демо: аватар на CPU</h2>
+      <span class="count">Алтайка · nano v2</span>
+    </div>
+    <div class="demo-frame">
+      <div class="demo-fallback">
+        <div>Аватар Алтайка, nano v2 — работает на CPU, без GPU. Внутри панели стенд не отрисовывается, открывается отдельной вкладкой.</div>
+        <a class="btn-link" href="https://sdk-avatar2d-browser-stage.digitalavatars.ru/?avatar=altaika_nano_v2_looped" target="_blank" rel="noopener">Открыть демо ↗</a>
+      </div>
     </div>
   </section>
 
@@ -249,6 +252,9 @@
     </div>
   </section>
 
+  </div>
+  </div>
+
   <footer>Внутренний дашборд команды Digital Avatars · обновляется по средам</footer>
 
 </div>
@@ -263,6 +269,7 @@
     frame.title = 'Интерактивный стенд Школы Мурино';
     frame.allow = 'autoplay; microphone';
     box.textContent = '';
+    box.classList.add('loaded');
     box.appendChild(frame);
   });
 </script>

@@ -5,10 +5,14 @@ body {
   background: #0d1117;
   color: #e6edf3;
   line-height: 1.5;
-  padding: 32px 24px 64px;
+  padding: 24px 24px 40px;
   -webkit-font-smoothing: antialiased;
 }
 .wrap { max-width: 1080px; margin: 0 auto; }
+/* Дашборд направления — шире и в две колонки, чтобы влезало в один экран */
+.wrap.wide { max-width: 1440px; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.cols > .col > section:last-child { margin-bottom: 0; }
 
 /* Header */
 header { margin-bottom: 8px; }
@@ -16,12 +20,12 @@ header { margin-bottom: 8px; }
   font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
   color: #21c56e; font-weight: 700; margin-bottom: 8px;
 }
-h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
 .sub { color: #8b949e; font-size: 14px; margin-top: 6px; }
 .updated { color: #6e7681; font-size: 12px; margin-top: 10px; }
 
 /* Nav (шапка направлений — дублируется в разметке каждой страницы) */
-.nav { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 28px; }
+.nav { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 20px; }
 .nav-btn {
   display: inline-block; padding: 9px 18px; border-radius: 10px;
   border: 1px solid #21262d; background: #161b22; color: #8b949e;
@@ -66,8 +70,8 @@ h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
 .home-card .hc-go { margin-left: auto; font-weight: 700; color: #79c0ff; }
 
 /* Sections */
-section { margin-bottom: 40px; }
-.sec-head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+section { margin-bottom: 24px; }
+.sec-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .sec-head h2 { font-size: 18px; font-weight: 700; }
 .sec-head .dot { width: 10px; height: 10px; border-radius: 50%; }
 .dot.green { background: #21c56e; }
@@ -77,12 +81,12 @@ section { margin-bottom: 40px; }
 .sec-head .count { color: #6e7681; font-size: 13px; font-weight: 600; margin-left: auto; }
 
 /* Summary counters */
-.counters { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 36px; }
+.counters { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 22px; }
 .counter {
   flex: 1; min-width: 150px; background: #161b22; border: 1px solid #21262d;
-  border-radius: 12px; padding: 16px 18px;
+  border-radius: 12px; padding: 12px 16px;
 }
-.counter .n { font-size: 28px; font-weight: 800; color: #e6edf3; }
+.counter .n { font-size: 24px; font-weight: 800; color: #e6edf3; }
 .counter .l { font-size: 12px; color: #8b949e; margin-top: 2px; }
 .counter.green .n { color: #21c56e; }
 .counter.blue  .n { color: #58a6ff; }
@@ -98,7 +102,7 @@ section { margin-bottom: 40px; }
 .list { border: 1px solid #21262d; border-radius: 12px; overflow: hidden; background: #161b22; }
 .row {
   display: flex; align-items: baseline; gap: 12px;
-  padding: 11px 16px; border-bottom: 1px solid #21262d;
+  padding: 9px 14px; border-bottom: 1px solid #21262d;
 }
 .row:last-child { border-bottom: none; }
 .row .name { font-size: 14.5px; font-weight: 600; color: #e6edf3; flex: 1; }
@@ -116,17 +120,20 @@ section { margin-bottom: 40px; }
 .tag.live  { background: rgba(33,197,110,0.20); color: #56d888; }
 .tag.upd   { background: rgba(121,192,255,0.16); color: #a5d6ff; }
 .tag.new   { background: rgba(210,153,255,0.16); color: #d2a8ff; }
+.tag.pause { background: rgba(139,148,158,0.14); color: #8b949e; }
+/* Пауза — строка приглушена, но остаётся в портфеле */
+.row.paused .name { color: #8b949e; font-weight: 500; }
 
 /* Фокус недели */
 .focus {
   border: 1px solid rgba(210,168,255,0.35); border-radius: 16px;
   background: linear-gradient(180deg, rgba(210,168,255,0.06), rgba(210,168,255,0) 220px);
-  padding: 22px 22px 24px;
+  padding: 18px 18px 20px;
 }
 .focus .sec-head { margin-bottom: 14px; }
 .focus .demo-img { max-width: 100%; }
 
-.stand { margin-top: 22px; border-top: 1px solid #21262d; padding-top: 20px; }
+.stand { margin-top: 16px; border-top: 1px solid #21262d; padding-top: 16px; }
 .stand-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .stand-title { font-size: 15px; font-weight: 700; }
 .stand-sub { font-size: 12.5px; color: #8b949e; margin-top: 2px; }
@@ -139,11 +146,15 @@ section { margin-bottom: 40px; }
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   background: #21262d; color: #e6edf3; padding: 1px 7px; border-radius: 5px; font-size: 12.5px;
 }
+/* До клика рамка стенда — компактная полоса с кнопкой, а не пустой 16:9.
+   Пропорции появляются вместе с iframe (класс .loaded ставит скрипт). */
 .stand-frame {
-  position: relative; margin-top: 14px; width: 100%; aspect-ratio: 16 / 9;
+  position: relative; margin-top: 14px; width: 100%;
   border: 1px solid #21262d; border-radius: 14px; overflow: hidden; background: #12171f;
   display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px;
+  padding: 18px;
 }
+.stand-frame.loaded { aspect-ratio: 16 / 9; padding: 0; }
 .stand-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 .stand-load {
   font: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
@@ -154,7 +165,7 @@ section { margin-bottom: 40px; }
 .stand-hint { font-size: 12.5px; color: #6e7681; max-width: 460px; text-align: center; }
 
 .next {
-  margin-top: 22px; display: flex; align-items: center; gap: 10px;
+  margin-top: 16px; display: flex; align-items: center; gap: 10px;
   border: 1px solid #21262d; border-left: 3px solid #e3b341; border-radius: 10px;
   background: #161b22; padding: 13px 16px; font-size: 14.5px; font-weight: 600;
 }
@@ -169,14 +180,12 @@ section { margin-bottom: 40px; }
   display: block; width: 100%; border-radius: 14px;
   border: 1px solid #21262d; background: #0d1117;
 }
-.vid figcaption { font-size: 12.5px; color: #8b949e; margin-top: 9px; }
-.vid-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+.vid figcaption { font-size: 12px; color: #8b949e; margin-top: 8px; line-height: 1.35; }
 
-/* Фокус недели: вертикальное видео слева, программа справа */
-.focus-split {
-  display: grid; grid-template-columns: 250px 1fr; gap: 22px;
-  align-items: start; margin-top: 16px;
-}
+/* Все ролики в один ряд и не во всю ширину: снято с телефона, все 9:16. */
+.vid-row { display: flex; gap: 14px; align-items: flex-start; margin-top: 14px; }
+.vid-row .vid { flex: 0 0 168px; }
+.vid-row .vid video { width: 100%; height: auto; }
 
 /* Программа выставки / этапы */
 .timeline { display: grid; gap: 10px; }
@@ -249,10 +258,10 @@ section { margin-bottom: 40px; }
 }
 
 /* Fin model */
-.fin-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.fin-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .plan {
   background: #161b22; border: 1px solid #21262d; border-radius: 14px;
-  padding: 22px 20px; position: relative;
+  padding: 16px 15px; position: relative;
 }
 .plan.mid { border-color: #21c56e; box-shadow: 0 0 0 1px rgba(33,197,110,0.35); }
 .plan .tier { font-size: 13px; color: #8b949e; font-weight: 600; }
@@ -266,12 +275,12 @@ section { margin-bottom: 40px; }
 }
 
 /* Sales plan table */
-.plan-title { font-size: 14px; font-weight: 700; color: #e6edf3; margin: 28px 0 4px; }
+.plan-title { font-size: 14px; font-weight: 700; color: #e6edf3; margin: 20px 0 4px; }
 .plan-sub { font-size: 12.5px; color: #8b949e; margin-bottom: 14px; }
 .ptable-scroll { overflow-x: auto; }
 .ptable { width: 100%; border-collapse: collapse; border: 1px solid #21262d;
   border-radius: 12px; overflow: hidden; background: #161b22; font-size: 14px; }
-.ptable th, .ptable td { padding: 10px 14px; text-align: right; }
+.ptable th, .ptable td { padding: 7px 12px; text-align: right; }
 .ptable th:first-child, .ptable td:first-child { text-align: left; }
 .ptable thead th { background: #1c2431; color: #8b949e; font-size: 12px;
   font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -288,17 +297,18 @@ section { margin-bottom: 40px; }
 .ptable .total.renew td:first-child, .ptable .total.renew td { color: #56d888; }
 .num-dim { color: #6e7681; }
 
-/* Avatar demo */
+/* Демо аватара: стенд не отрисовывается внутри панели (см. README),
+   поэтому вместо мёртвого 16:9 — компактная полоса со ссылкой. */
 .demo-frame {
-  position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9;
-  border: 1px solid #21262d; border-radius: 14px; overflow: hidden; background: #161b22;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  border: 1px solid #21262d; border-radius: 14px; background: #161b22;
+  padding: 16px 18px;
 }
-.demo-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
-.demo-fallback {
-  position: absolute; inset: 0; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 12px; text-align: center;
-  padding: 24px; color: #8b949e; font-size: 13px; z-index: -1;
+.demo-frame .demo-fallback {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  color: #8b949e; font-size: 13px; width: 100%;
 }
+.demo-frame .demo-fallback .btn-link { margin-top: 0; margin-left: auto; }
 .btn-link {
   display: inline-block; margin-top: 12px; padding: 9px 16px; border-radius: 10px;
   background: #21c56e; color: #06210f; font-weight: 700; font-size: 13px;
@@ -307,16 +317,19 @@ section { margin-bottom: 40px; }
 .demo-note { font-size: 12.5px; color: #8b949e; margin-top: 10px; }
 .demo-img { width: 100%; max-width: 760px; border-radius: 14px; border: 1px solid #21262d; display: block; }
 
-footer { margin-top: 40px; color: #6e7681; font-size: 12px; text-align: center; }
+footer { margin-top: 28px; color: #6e7681; font-size: 12px; text-align: center; }
+
+@media (max-width: 1100px) {
+  .cols { grid-template-columns: 1fr; }
+  .wrap.wide { max-width: 1080px; }
+}
 
 @media (max-width: 720px) {
   .fin-grid { grid-template-columns: 1fr; }
   .home-cards { grid-template-columns: 1fr; }
   .row { flex-wrap: wrap; gap: 6px 10px; }
   .nav-home { margin-left: 0; width: 100%; }
-  .vid-grid { grid-template-columns: 1fr; }
-  .focus-split { grid-template-columns: 1fr; }
-  .focus-split .vid { max-width: 250px; }
+  .vid-row .vid { flex: 1 1 0; }
   .tl { flex-wrap: wrap; gap: 4px 14px; }
   .launch-date { margin-left: 0; }
 }
